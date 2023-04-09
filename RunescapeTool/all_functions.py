@@ -42,131 +42,271 @@ def drakolith_mining():
     print("""is your camera facing north,
 Ore box in the first spot,
 and the ore you wish to mine directly south of you?""")
-    input("Y/N ")
-    count_down()
-    while True:
-        #Mining With Box
-        for i in range(80):
-            time_between_box = random.randint(10,20)
-            
-            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
-            pyautogui.click()
-            time.sleep (time_between_box)
-            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
-            pyautogui.click()
-            time.sleep (time_between_box)
-            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
-            pyautogui.click()
-            
+    user_input = input("Y/N ")
+    if user_input == "N":
+        print("Reposition yourself first")
+        main_menu()
         pass
-        #To deposit
-        pyautogui.moveTo (1140, 49, 1) #1st door
-        pyautogui.click()
-        time.sleep(10)
-        pyautogui.moveTo (2230, 1280, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (2230, 1000, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (2230, 1000, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1760, 50, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1649, 256, 1) #Gate
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (650, 236, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1247, 334, 1) #2nd door
-        pyautogui.click()
-        time.sleep(5)
-        #Deposit
-        deposit()
-        time.sleep(5)
-        #back to ore
-        pyautogui.moveTo (2249, 1878, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (2249, 1878, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1180, 1890, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1180, 1890, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (423, 1180, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (765, 551, 1)
-        pyautogui.click()
-        time.sleep(10)
-        pyautogui.moveTo (1873, 1887, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1626, 1163, 1)
-        pyautogui.click()
-        time.sleep (5)
-    pass
+    if user_input == "n":
+        print("reposition yourself first")
+        main_menu()
+        pass
+    if user_input == "y":    
+        count_down()
+        while True:
+            #Mining With Box
+            for i in range(80):
+                time_between_box = random.randint(10,20)
+                
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.click()
+                
+            pass
+            #To deposit
+            pyautogui.moveTo (1140, 49, 1) #1st door
+            pyautogui.click()
+            time.sleep(10)
+            pyautogui.moveTo (2230, 1280, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2230, 1000, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2230, 1000, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1760, 50, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1649, 256, 1) #Gate
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (650, 236, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1247, 334, 1) #2nd door
+            pyautogui.click()
+            time.sleep(5)
+            #Deposit
+            deposit()
+            time.sleep(5)
+            #back to ore
+            pyautogui.moveTo (2249, 1878, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2249, 1878, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1180, 1890, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1180, 1890, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (423, 1180, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (765, 551, 1)
+            pyautogui.click()
+            time.sleep(10)
+            pyautogui.moveTo (1873, 1887, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1626, 1163, 1)
+            pyautogui.click()
+            time.sleep (5)
+        pass
+    if user_input == "Y":    
+        count_down()
+        while True:
+            #Mining With Box
+            for i in range(80):
+                time_between_box = random.randint(10,20)
+                
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.click()
+                
+            pass
+            #To deposit
+            pyautogui.moveTo (1140, 49, 1) #1st door
+            pyautogui.click()
+            time.sleep(10)
+            pyautogui.moveTo (2230, 1280, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2230, 1000, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2230, 1000, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1760, 50, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1649, 256, 1) #Gate
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (650, 236, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1247, 334, 1) #2nd door
+            pyautogui.click()
+            time.sleep(5)
+            #Deposit
+            deposit()
+            time.sleep(5)
+            #back to ore
+            pyautogui.moveTo (2249, 1878, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2249, 1878, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1180, 1890, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1180, 1890, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (423, 1180, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (765, 551, 1)
+            pyautogui.click()
+            time.sleep(10)
+            pyautogui.moveTo (1873, 1887, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1626, 1163, 1)
+            pyautogui.click()
+            time.sleep (5)
+        pass
+pass
 
 def orichalcite_mining():
     print("""are you at the NE ore,
 is your camera facing north,
 Ore box in the first spot,
 and the ore you wish to mine directly south of you?""")
-    input("Y/N ")
-    count_down()
-    while True:
-        #Mining With Box
-        for i in range(80):
-            time_between_box = random.randint(10,20)
-            
-            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
-            pyautogui.click()
-            time.sleep (time_between_box)
-            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
-            pyautogui.click()
-            time.sleep (time_between_box)
-            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
-            pyautogui.click()
-            
+    user_input = input("Y/N ")
+    if user_input == "N":
+        print("reposition youreself first")
+        main_menu()
         pass
-        #To deposit
-        pyautogui.moveTo(1300, 60, .5)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo(1640, 344, .5)#GAte
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (650, 236, 1)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1247, 334, 1) #2nd door
-        pyautogui.click()
-        time.sleep(5)
-        #Deposit
-        deposit()
-        time.sleep(5)
-        #back to ore
-        pyautogui.moveTo (2217, 1886, .5)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (2264, 1875, .5)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1542, 1853, .5)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1542, 1853, .5)
-        pyautogui.click()
-        time.sleep(5)
-        pyautogui.moveTo (1734, 1185, .5)
-        pyautogui.click()
+    if user_input == "n"
+        print("reposition youreself first")
+        main_menu()
+        pass
+    if user_input == "Y"
+        count_down()
+        while True:
+            #Mining With Box
+            for i in range(80):
+                time_between_box = random.randint(10,20)
+                
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.click()
+                
+            pass
+            #To deposit
+            pyautogui.moveTo(1300, 60, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo(1640, 344, .5)#GAte
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (650, 236, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1247, 334, 1) #2nd door
+            pyautogui.click()
+            time.sleep(5)
+            #Deposit
+            deposit()
+            time.sleep(5)
+            #back to ore
+            pyautogui.moveTo (2217, 1886, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2264, 1875, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1542, 1853, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1542, 1853, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1734, 1185, .5)
+            pyautogui.click()
+    pass
+    if user_input == "y"
+        count_down()
+        while True:
+            #Mining With Box
+            for i in range(80):
+                time_between_box = random.randint(10,20)
+                
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.click()
+                time.sleep (time_between_box)
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.click()
+                
+            pass
+            #To deposit
+            pyautogui.moveTo(1300, 60, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo(1640, 344, .5)#GAte
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (650, 236, 1)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1247, 334, 1) #2nd door
+            pyautogui.click()
+            time.sleep(5)
+            #Deposit
+            deposit()
+            time.sleep(5)
+            #back to ore
+            pyautogui.moveTo (2217, 1886, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (2264, 1875, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1542, 1853, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1542, 1853, .5)
+            pyautogui.click()
+            time.sleep(5)
+            pyautogui.moveTo (1734, 1185, .5)
+            pyautogui.click()
+    pass
 pass
 
 def mouse_jiggler():
@@ -185,8 +325,13 @@ and the ore you wish to mine directly south of you?""")
     user_input = input("Y/N ")
     if user_input == "N":
         print("position yourself then select again")
+        time.sleep(1)
         main_menu()
-    else:
+    if user_input == "n":
+        print("position yourself then select again")
+        time.sleep(1)
+        main_menu()
+    if user_input == "Y":
         count_down()
         while True:
             time_between_box = random.randint(10,20)
@@ -195,6 +340,18 @@ and the ore you wish to mine directly south of you?""")
             time.sleep (time_between_box)
             pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
             pyautogui.click()
+    if user_input == "y":
+        count_down()
+        while True:
+            time_between_box = random.randint(10,20)
+            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+            pyautogui.click()
+            time.sleep (time_between_box)
+            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+            pyautogui.click()
+    else:
+        print("please input somthing not stupid")
+        mining_with_box()
 pass
 
 def smithing():
