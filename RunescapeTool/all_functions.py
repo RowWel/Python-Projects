@@ -52,7 +52,8 @@ and the ore you wish to mine directly south of you?""")
         print("reposition yourself first")
         main_menu()
         pass
-    if user_input == "y":    
+    if user_input == "y":   
+        run_count = 0
         count_down()
         while True:
             print("Run Count = ", run_count)
@@ -60,13 +61,13 @@ and the ore you wish to mine directly south of you?""")
             for i in range(80):
                 time_between_box = random.randint(10,20)
                 
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) # type: ignore #box
                 pyautogui.click()
                 
             pass
@@ -123,7 +124,7 @@ and the ore you wish to mine directly south of you?""")
             pyautogui.moveTo (1626, 1163, 1)
             pyautogui.click()
             time.sleep (5)
-            count += 1
+            run_count += 1
         pass
     if user_input == "Y":  
         run_count = 0  
@@ -134,13 +135,13 @@ and the ore you wish to mine directly south of you?""")
             for i in range(80):
                 time_between_box = random.randint(10,20)
                 
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) # type: ignore #box
                 pyautogui.click()
                 
             pass
@@ -227,13 +228,13 @@ and the ore you wish to mine directly south of you?""")
             for i in range(80):
                 time_between_box = random.randint(10,20)
                 
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) # type: ignore #box
                 pyautogui.click()
                 
             pass
@@ -278,13 +279,13 @@ and the ore you wish to mine directly south of you?""")
             for i in range(80):
                 time_between_box = random.randint(10,20)
                 
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+                pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
                 pyautogui.click()
                 time.sleep (time_between_box)
-                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+                pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) # type: ignore #box
                 pyautogui.click()
                 
             pass
@@ -352,19 +353,19 @@ and the ore you wish to mine directly south of you?""")
         count_down()
         while True:
             time_between_box = random.randint(10,20)
-            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
             pyautogui.click()
             time.sleep (time_between_box)
-            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) # type: ignore #box
             pyautogui.click()
     if user_input == "y":
         count_down()
         while True:
             time_between_box = random.randint(10,20)
-            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) # type: ignore #Rock
             pyautogui.click()
             time.sleep (time_between_box)
-            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) # type: ignore #box
             pyautogui.click()
     else:
         print("please input somthing not stupid")
