@@ -39,6 +39,7 @@ def count_down():
 pass
 
 def drakolith_mining():
+    run_count = 0
     print("""is your camera facing north,
 Ore box in the first spot,
 and the ore you wish to mine directly south of you?""")
@@ -54,6 +55,7 @@ and the ore you wish to mine directly south of you?""")
     if user_input == "y":    
         count_down()
         while True:
+            print("Run Count = ", run_count)
             #Mining With Box
             for i in range(80):
                 time_between_box = random.randint(10,20)
@@ -121,10 +123,13 @@ and the ore you wish to mine directly south of you?""")
             pyautogui.moveTo (1626, 1163, 1)
             pyautogui.click()
             time.sleep (5)
+            count += 1
         pass
-    if user_input == "Y":    
+    if user_input == "Y":  
+        run_count = 0  
         count_down()
         while True:
+            print("Run Count = ", run_count)
             #Mining With Box
             for i in range(80):
                 time_between_box = random.randint(10,20)
@@ -192,10 +197,15 @@ and the ore you wish to mine directly south of you?""")
             pyautogui.moveTo (1626, 1163, 1)
             pyautogui.click()
             time.sleep (5)
+            run_count += 1
         pass
+    else:
+        print("enter something not stupid")
+        main_menu()
 pass
 
 def orichalcite_mining():
+    run_count = 0 
     print("""are you at the NE ore,
 is your camera facing north,
 Ore box in the first spot,
@@ -205,11 +215,12 @@ and the ore you wish to mine directly south of you?""")
         print("reposition youreself first")
         main_menu()
         pass
-    if user_input == "n"
+    if user_input == "n":
         print("reposition youreself first")
         main_menu()
         pass
-    if user_input == "Y"
+    if user_input == "Y":
+        print("Run Count = ", run_count)
         count_down()
         while True:
             #Mining With Box
@@ -257,8 +268,10 @@ and the ore you wish to mine directly south of you?""")
             time.sleep(5)
             pyautogui.moveTo (1734, 1185, .5)
             pyautogui.click()
+            run_count += 1
     pass
-    if user_input == "y"
+    if user_input == "y":
+        print("Run Count = ", run_count)
         count_down()
         while True:
             #Mining With Box
@@ -306,13 +319,17 @@ and the ore you wish to mine directly south of you?""")
             time.sleep(5)
             pyautogui.moveTo (1734, 1185, .5)
             pyautogui.click()
-    pass
+            run_count += 1
+    else:
+        print("enter something not stupid")
+        main_menu()
 pass
 
 def mouse_jiggler():
     count_down()
     while True:
         jiggler_rand_time = random.randint(5, 20)
+        print("delay ", jiggler_rand_time)
         pyautogui.move (20, 20, 1)
         pyautogui.move (-20, -20, 1)
         time.sleep (jiggler_rand_time)

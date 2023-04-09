@@ -4,11 +4,15 @@ import all_functions
 
 pyautogui.FAILSAFE = True
 
-disclaimer = """This is how I am learning python3, Macroes and automation in Runescape is cheating.
-I am not reponsible for any damages to property, accounts and missuse of this software.
-this program will simulate HID (Human Interface Device) input and mov eyour move and input text to
-acomplish tasks in game for you.
-this is in early stages"""
+disclaimer = """This program is a macro/scripting tool for Runescape3.
+Macros and scripting in RS3 is against the T&C and will get you banned
+I cant promise FUD
+User risk is implied
+How it Works:
+Using Pyautogui python will send HID input to the system and control the game for you
+Choose a function to run and hit enter, specific insturctions may follow
+Pysutogui moves the mouse by the pixel and all postions on the screen are given on an x y grid
+Many of the tools will not work if your monitor resolution is not equal to 3072x1920"""
 
 print(disclaimer)
 time.sleep (1)
