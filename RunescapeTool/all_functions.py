@@ -182,15 +182,18 @@ def mining_with_box():
     print("""is your camera facing north,
 Ore box in the first spot,
 and the ore you wish to mine directly south of you?""")
-    input("Y/N ")
-    count_down()
-    while True:
-        time_between_box = random.randint(10,20)
-        pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
-        pyautogui.click()
-        time.sleep (time_between_box)
-        pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
-        pyautogui.click()
+    user_input = input("Y/N ")
+    if user_input == "N":
+        print("position yourself then select again")
+    else:
+        count_down()
+        while True:
+            time_between_box = random.randint(10,20)
+            pyautogui.moveTo(1540, 1080, .5, pyautogui.easeInElastic) #Rock
+            pyautogui.click()
+            time.sleep (time_between_box)
+            pyautogui.moveTo(2722, 1203, .5, pyautogui.easeInElastic) #box
+            pyautogui.click()
 pass
 
 def smithing():
@@ -217,5 +220,7 @@ def main_menu():
         scripts[selection-1]()
     else:
         print("Invalid selection")
+        time.sleep (1)
+        main_menu()
 pass
 
