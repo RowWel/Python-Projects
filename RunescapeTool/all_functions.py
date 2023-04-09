@@ -185,6 +185,7 @@ and the ore you wish to mine directly south of you?""")
     user_input = input("Y/N ")
     if user_input == "N":
         print("position yourself then select again")
+        main_menu()
     else:
         count_down()
         while True:
