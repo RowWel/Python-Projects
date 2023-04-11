@@ -198,6 +198,17 @@ and the ore you wish to mine directly south of you?""")
 pass
 
 def mouse_jiggler():
+    selection = input("are you doing the easter event? Y/N")
+    time_interval = random.randint(58, 62)
+    if selection == "Y" or selection == "y":
+        print("this script will start clockwise then roatate you every minute to keep max xp")
+        input("press any key to continue")
+        while True:
+            pyautogui.click (1930, 1662)
+            time.sleep(time_interval)
+            pyautogui.click (2137, 1665)
+            time.sleep (time_interval)
+
     count_down()
     while True:
         jiggler_rand_time = random.randint(5, 20)
