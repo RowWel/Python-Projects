@@ -198,17 +198,7 @@ and the ore you wish to mine directly south of you?""")
 pass
 
 def mouse_jiggler():
-    selection = input("are you doing the easter event? Y/N")
-    time_interval = random.randint(58, 62)
-    if selection == "Y" or selection == "y":
-        print("this script will start clockwise then roatate you every minute to keep max xp")
-        input("press any key to continue")
-        while True:
-            pyautogui.click (1930, 1662)
-            time.sleep(time_interval)
-            pyautogui.click (2137, 1665)
-            time.sleep (time_interval)
-
+    input("Press enter when ready")
     count_down()
     while True:
         jiggler_rand_time = random.randint(5, 20)
@@ -272,12 +262,31 @@ def smelting():
         run_count += 1
 pass
 
-scripts = [drakolith_mining, orichalcite_mining, mouse_jiggler, mining_with_box, smithing, smelting]
+def fletching():
+        print("Stand south of a tree and it will chop and fletch sticks")
+        input("Press enter when ready")
+        while True:
+            for i in range(20):
+                pyautogui.leftClick(1523, 733)
+                time.sleep(10)
+                pass
+            pyautogui.rightClick(2728, 1205)
+            time.sleep(.5)
+            pyautogui.leftClick(2707, 1254)
+            time.sleep(1)
+            pyautogui.press (' ')
+            time.sleep(40)
+            pass
+
+
+            
+
+scripts = [drakolith_mining, orichalcite_mining, mouse_jiggler, mining_with_box, smithing, smelting, fletching]
 
 def main_menu():
     print("Pick a script to run")
-    print("1. drakolith_mining  2. orichalcite_mining  3. mouse_jiggler  4. mining_with_box  5. smithing  6. smelting")
-    selection = int(input("Enter selection (1-6): "))
+    print("1. drakolith_mining  2. orichalcite_mining  3. mouse_jiggler  4. mining_with_box  5. smithing  6. smelting 7. Fletching")
+    selection = int(input("Enter selection (1-7): "))
     if selection >= 1 and selection <= len(scripts):
         scripts[selection-1]()
     else:
